@@ -74,9 +74,12 @@ function removeFromCart(item) {
 function placeOrder(cardNumber) {
   if (cardNumber === 0 || cardNumber === null) {
     return "Sorry, we don't have a credit card on file for you."
+  } else if (total() === 0) {
+     return "Sorry, we don't have a credit card on file for you."
+    
+  } else {
+    cart.splice(0, cart.length); //cart = []; do not use slice, which is nodesctructive.
+    return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
   }
-
-  //cart.splice(0, cart.length); //cart = []; do not use slice, which is nodesctructive.
-  return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
 
 }
