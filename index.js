@@ -25,7 +25,7 @@ function addToCart(item) {
  return `${newItem.itemName} has been added to your cart.`
 }
 
-  
+
 /////////////////////////////////////////////////////////// convert array itmes/object into a string with the required format.
 
 var allItemsPriceInString = "In your cart, you have ";
