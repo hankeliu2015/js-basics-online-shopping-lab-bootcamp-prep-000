@@ -33,14 +33,16 @@ function viewCart() {
     return "Your shopping cart is empty."
   } else if (cart.length === 1) {
 
-    return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`
+    return allItemsPriceInString.concat[`${cart[0].itemName} at $${cart[0].itemPrice}.`]
 
   } else if (cart.length === 2){
+    
+    return allItemsPriceInString.concat[`${cart[0].itemName} at $${cart[0].itemPrice}, and ${cart[1].itemName} at $${cart[1].itemPrice}`];
 
+  } else {
     for (var i=0; i < cart.length-1; i++) {
       allItemsPriceInString.concat(`${itemList[i].itemName}  at $${cart[i].itemPrice},`);
     }
-
   }
   return allItemsPriceInString.concat(` and ${cart[itemList.length-1].itemName}  at $${cart[itemList-1].itemPrice}.`) ;
 
