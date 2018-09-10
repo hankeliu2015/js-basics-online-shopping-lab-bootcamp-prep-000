@@ -40,9 +40,9 @@ function viewCart() {
     return "In your cart, you have " + `${cart[0].itemName} at $${cart[0].itemPrice}, and ${cart[1].itemName} at $${cart[1].itemPrice}.`;
 
   } else {
-    var allItemsPriceToView = "In your cart, you have ";
+    var allItemsPriceToView = "In your cart, you have";
     for (var i=0; i < cart.length-1; i++) {
-      allItemsPriceToView += `${cart[i].itemName} at $${cart[i].itemPrice},`;
+      allItemsPriceToView += ` ${cart[i].itemName} at $${cart[i].itemPrice},`;
     }
   }
   return allItemsPriceToView.concat(` and ${cart[cart.length-1].itemName} at $${cart[cart.length-1].itemPrice}.`) ;
