@@ -47,7 +47,7 @@ function viewCart() {
       allItemsPriceInString.concat(`${cart[i].itemName}  at $${cart[i].itemPrice},`);
     }
   }
-  return allItemsPriceInString.concat(` and ${cart[itemList.length-1].itemName}  at $${cart[itemList-1].itemPrice}.`) ;
+  return allItemsPriceInString.concat(` and ${cart[cart.length-1].itemName}  at $${cart[cart.length-1].itemPrice}.`) ;
 
   //allInYourCart.concat( `and ${itemList[itemList.length-1].itemName] at '$'${itemList[itemList.length-1)].itemPrice}) `
 
