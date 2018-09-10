@@ -28,8 +28,6 @@ function addToCart(item) {
 
 /////////////////////////////////////////////////////////// convert array itmes/object into a string with the required format.
 
-var allItemsPriceInString = "In your cart, you have ";
-
 function viewCart() {
 
   if (cart.length === 0) {
@@ -42,11 +40,12 @@ function viewCart() {
     return "In your cart, you have " + `${cart[0].itemName} at $${cart[0].itemPrice}, and ${cart[1].itemName} at $${cart[1].itemPrice}.`;
 
   } else {
+    var allItemsPriceToView = "In your cart, you have ";
     for (var i=0; i < cart.length-1; i++) {
-      allItemsPriceInString =+ `${cart[i].itemName} at $${cart[i].itemPrice},`;
+      allItemsPriceToView =+ `${cart[i].itemName} at $${cart[i].itemPrice},`;
     }
   }
-  return allItemsPriceInString + ` and ${cart[cart.length-1].itemName}  at $${cart[cart.length-1].itemPrice}.` ;
+  return allItemsPriceToView + ` and ${cart[cart.length-1].itemName}  at $${cart[cart.length-1].itemPrice}.` ;
 
 }
 
