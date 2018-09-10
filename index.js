@@ -78,6 +78,7 @@ function placeOrder(cardNumber) {
      return "Sorry, we don't have a credit card on file for you."
 
   } else {
+    var = totalvalue; 
     totalvalue = total();
     cart.splice(0, cart.length); //cart = []; do not use slice, which is nodesctructive.
     return `Your total cost is $${totalvalue}, which will be charged to the card ${cardNumber}.`
