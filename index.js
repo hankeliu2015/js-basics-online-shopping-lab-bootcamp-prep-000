@@ -45,7 +45,7 @@ function viewCart() {
       allItemsPriceToView =+ `${cart[i].itemName} at $${cart[i].itemPrice},`;
     }
   }
-  return allItemsPriceToView + ` and ${cart[cart.length-1].itemName}  at $${cart[cart.length-1].itemPrice}.` ;
+  return allItemsPriceToView + ` and ${cart[cart.length-1].itemName} at $${cart[cart.length-1].itemPrice}.` ;
 
 }
 
