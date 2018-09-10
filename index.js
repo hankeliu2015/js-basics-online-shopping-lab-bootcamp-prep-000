@@ -43,7 +43,7 @@ function viewCart() {
 
   } else {
     for (var i=0; i < cart.length-1; i++) {
-      allItemsPriceInString.concat(`${cart[i].itemName} at $${cart[i].itemPrice},`);
+      allItemsPriceInString + `${cart[i].itemName} at $${cart[i].itemPrice},`;
     }
   }
   return allItemsPriceInString.concat(` and ${cart[cart.length-1].itemName}  at $${cart[cart.length-1].itemPrice}.`) ;
